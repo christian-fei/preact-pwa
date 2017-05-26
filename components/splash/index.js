@@ -14,7 +14,7 @@ export default class Splash extends Component {
   componentDidMount () {
     this.timer = setTimeout(() => {
       this.setState({showing: false})
-    }, 2000)
+    }, 2500)
   }
   render () {
     if (!this.state.showing) return null
