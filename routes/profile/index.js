@@ -16,7 +16,7 @@ export default class Profile extends Component {
   // gets called when this route is navigated to
   componentDidMount() {
     // start a timer for the clock:
-    this.timer = setInterval(this.updateTime, 1000);
+    this.timer = setInterval(() => this.updateTime(), 1000);
   }
 
   // gets called just before navigating away from the route
@@ -43,7 +43,7 @@ export default class Profile extends Component {
         <div>Current time: {new Date(time).toLocaleString()}</div>
 
         <p>
-          <button onClick={this.increment}>Click Me</button>
+          <button onClick={() => this.increment()}>Click Me</button>
           {' '}
           Clicked {count} times.
         </p>
