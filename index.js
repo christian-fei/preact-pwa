@@ -9,16 +9,14 @@ import Home from './routes/home'
 import Profile from './routes/profile'
 
 if (global.navigator && 'serviceWorker' in global.navigator) {
-	console.log('adding serviceWorker')
-  global.navigator.serviceWorker.register('/sw.js').then(function () {
-    console.log('Service Worker Registered')
-  })
+  global.navigator.serviceWorker.register('/sw.js')
+  .catch(() => console.error('failed to register /sw.js'))
 }
 
 export default () => (
   <div id='app'>
     <Header />
-			<Splash/>
+    <Splash />
     <Router>
       <Home path='/' />
       <Profile path='/profile/' user='me' />
