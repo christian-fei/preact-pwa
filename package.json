@@ -22,6 +22,7 @@
     "preact-cli": "^1.0.1"
   },
   "dependencies": {
+    "mitt": "^1.1.2",
     "preact": "^8.1.0",
     "preact-compat": "^3.16.0",
     "preact-router": "^2.5.2"
